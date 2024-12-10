@@ -6,9 +6,11 @@ const version = '1.0.0';
 
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', (req, res) => {
   // set response content
-  res.sendFile(__dirname + '/html/index.html');
+  res.sendFile(__dirname + '/index.html');
   console.log(
     `[Version ${version}]: New request => http://${hostname}:${port}` + req.url
   );

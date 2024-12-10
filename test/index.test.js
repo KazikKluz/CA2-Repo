@@ -17,7 +17,7 @@ describe('health endpoint', () => {
 describe('root endpoint', () => {
   test('should return status code 200 and index.html', async () => {
     const expected =
-      '<span class="p-1 text-xl font-black leading-none text-gray-900">Scale-Up SaaS 🔥</span>';
+      '<title>Natours | Exciting tours for adventurous people</title>';
 
     const res = await request(app).get('/');
     expect(res.statusCode).toEqual(200);
