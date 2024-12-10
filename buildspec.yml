@@ -1,9 +1,11 @@
 version: 0.2
 
 phases:
-  test:
+  install:
     commands:
-      - echo Starting tests...
+      - echo Installing source NPM dependencies...
+      - npm install
+      - echo Running tests...
       - npm test
   pre_build:
     commands:
