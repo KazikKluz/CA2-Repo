@@ -1,38 +1,17 @@
 {
-  "name": "nodejs-ssl-server",
+  "name": "natours-nodejs",
   "version": "1.0.0",
-  "description": "Show you how to deploy nodejs server on AWS EC2 Ubuntu server with Free SSL and Nginx",
+  "description": "CA 2",
   "main": "server.js",
   "scripts": {
     "test": "jest --detectOpenHandles"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saasscaleup/nodejs-ssl-server.git"
-  },
-  "keywords": [
-    "nodejs",
-    "AWS",
-    "EC@",
-    "instanace",
-    "Free",
-    "SSL",
-    "Nginx",
-    "Reverse",
-    "Proxy",
-    "Expressjs"
-  ],
-  "author": "Scale-Up SaaS",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/saasscaleup/nodejs-ssl-server/issues"
-  },
-  "homepage": "https://github.com/saasscaleup/nodejs-ssl-server#readme",
+  "author": "Kazik Kluz",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "4.18.2"
   },
   "devDependencies": {
-    "jest": "^29.7.0",
-    "supertest": "^7.0.0"
+    "jest": "29.7.0",
+    "supertest": "7.0.0"
   }
 }
