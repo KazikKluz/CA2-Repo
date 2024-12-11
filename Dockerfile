@@ -1,12 +1,22 @@
-FROM node:alpine
+# Build stage
+FROM node:20-alpine AS build
 
-WORKDIR /nodejs-docker-aws-ecs
-
-COPY package.json .
-
-RUN npm install
+WORKDIR /app
 
 COPY . .
+
+RUN npm install --omit=dev 
+
+# Runtime stage
+FROM node:20-alpine AS runtime
+
+WORKDIR /app
+
+RUN chown node:node ./
+
+USER node
+
+COPY --from=build /app /app
 
 EXPOSE 3000
 
